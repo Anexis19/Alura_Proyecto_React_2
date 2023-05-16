@@ -4,7 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Llamado a identificador root que se encuentra en el index HTML
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// Renderizacion de elemento JS en el elemento que hace referencia a root
 root.render(
   <React.StrictMode>
     <App />
