@@ -9,12 +9,11 @@ const Formulario = () =>{
         <form>
             <h2>Rellena el formulario para crear el colaborador</h2>
             {/* Uso del componente CampoTexto importado */}
-            <CampoTexto></CampoTexto>
-            <CampoTexto></CampoTexto>
-            <CampoTexto></CampoTexto>
-            <CampoTexto></CampoTexto>
-            <CampoTexto></CampoTexto>
-            <CampoTexto></CampoTexto>
+            {/* Se define una props titulo, la cual es enviada y usada al componente como un OBJETO */}
+            <CampoTexto titulo = "Nombre" placeholder = "Ingresa el nombre"></CampoTexto>
+            <CampoTexto titulo = "Puesto" placeholder = "Ingresa el puesto"></CampoTexto>
+            <CampoTexto titulo = "Foto"   placeholder = "Ingresa enlace de la foto"></CampoTexto>
+
         </form>
     </section>
 }
