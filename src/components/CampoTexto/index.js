@@ -10,7 +10,11 @@ const CampoTexto = (props) =>{
 
     return <div className="campo-texto">
         <label>{props.titulo}</label>
-        <input type="text" placeholder={props.placeholder} />
+        {/* Se reciben los valores de las PROPS provenientes del componente PADRE que es
+            el formulario. De igual manera, si no se ingresa esta propiedad, el campo deja de
+            ser obligatorio
+        */}
+        <input type="text" placeholder={props.placeholder} required={props.required}/>
     </div>
 }
 // Exportacion de componente CampoTexto
