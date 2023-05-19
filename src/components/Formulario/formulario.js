@@ -2,6 +2,7 @@
 import "./formulario.css"
 import CampoTexto from "../CampoTexto/"
 import ListaOpciones from "../ListaOpciones"
+import Boton from "../Boton"
 
 // Creacion de arrow function
 const Formulario = () =>{
@@ -15,6 +16,8 @@ const Formulario = () =>{
             <CampoTexto titulo = "Puesto" placeholder = "Ingresa el puesto"></CampoTexto>
             <CampoTexto titulo = "Foto"   placeholder = "Ingresa enlace de la foto"></CampoTexto>
             <ListaOpciones></ListaOpciones>
+            {/* Siempre que haya la posibilidad, se deben enviar texto usando PROPS */}
+            <Boton texto="Crear Colaborador"></Boton>
         </form>
     </section>
 }

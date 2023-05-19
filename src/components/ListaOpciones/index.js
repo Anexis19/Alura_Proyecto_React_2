@@ -28,7 +28,7 @@ const ListaOpciones = () =>{
             */}
 
             { equipos.map((equipo,index)=>{
-                // En este caso se esta enviando la propiedad Key, la cual en este caso, debe ser unica
+                // En este caso se esta enviando la propiedad Key, la cual en este caso, debe ser unica y por ende, toma el valor del iterador index
                 return <option value="" key={index}>{equipo}</option>
             })}
         </select>
