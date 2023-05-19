@@ -1,6 +1,7 @@
 // Importacion de Archivo CSS
 import "./formulario.css"
 import CampoTexto from "../CampoTexto/"
+import ListaOpciones from "../ListaOpciones"
 
 // Creacion de arrow function
 const Formulario = () =>{
@@ -13,7 +14,7 @@ const Formulario = () =>{
             <CampoTexto titulo = "Nombre" placeholder = "Ingresa el nombre"></CampoTexto>
             <CampoTexto titulo = "Puesto" placeholder = "Ingresa el puesto"></CampoTexto>
             <CampoTexto titulo = "Foto"   placeholder = "Ingresa enlace de la foto"></CampoTexto>
-
+            <ListaOpciones></ListaOpciones>
         </form>
     </section>
 }
