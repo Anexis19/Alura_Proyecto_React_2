@@ -15,7 +15,7 @@ const ListaOpciones = (props) =>{
 
 
     const manejarCambio = (e) =>{
-        console.log(e.target.value)
+        // Actualizacion de variable del estado
         props.actualizar(e.target.value)
     }
 
