@@ -15,6 +15,7 @@ const Formulario = () =>{
     const [nombre, actualizarNombre] = useState("")
     const [puesto, actualizarPuesto] = useState("")
     const [foto, actualizarFoto] = useState("")
+    const [equipo, acutalizarEquipo] = useState("")
 
     // Transformacion y lectura de datos para establecer un SPA (Single Page Application). Evitando la sobrecarga
     const manejarEnvio = (e) =>{
@@ -27,6 +28,7 @@ const Formulario = () =>{
             nombre: nombre,
             puesto: puesto,
             foto: foto,
+            equipo: equipo
 
         }
         console.log(datosEnviar)
@@ -67,8 +69,10 @@ const Formulario = () =>{
                 valor = {foto}
                 actualizar = {actualizarFoto}
             ></CampoTexto>
-
-            <ListaOpciones></ListaOpciones>
+            <ListaOpciones
+                valor = {equipo}
+                actualizar = {acutalizarEquipo}
+            ></ListaOpciones>
             {/* Siempre que haya la posibilidad, se deben enviar texto usando PROPS */}
             <Boton texto="Crear Colaborador"></Boton>
         </form>
