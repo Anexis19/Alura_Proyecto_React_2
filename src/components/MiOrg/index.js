@@ -1,4 +1,3 @@
-import { useState } from "react"
 import "./MiOrg.css"
 
 // Preparacion de componente que recibira las propiedades el componente PADRE, en este caso APP.js

@@ -3,13 +3,16 @@ import './App.css';
 import Header from './components/Header/header';
 import Formulario from './components/Formulario/formulario';
 import MiOrg from './components/MiOrg';
+import Equipo from './components/Equipo';
+
 // Importacion de useState de React
 import { useState } from 'react';
+
 
 // Definicion de componente Padre. Componente APP es el componente principal
 function App() {
   // Creacion de estado
-  const [mostrarFormulario, actualizarFormulario] = useState(true)
+  const [mostrarFormulario, actualizarFormulario] = useState(false)
 
   /*
   Creacion de funcion que cambia el estado de mostrarFormulario. Esta funcion es enviada como PROP (PROPIEDAD)
@@ -30,7 +33,11 @@ function App() {
       {/* Aplicacion de operador Ternario que evalua el estado de mostrarFormulario */}
       { mostrarFormulario === true ? <Formulario></Formulario> : <></>}
       <MiOrg cambiarMostrar = {cambiarMostrar}></MiOrg>
-
+      <Equipo equipo="Programación"></Equipo>
+      <Equipo equipo="Front End"></Equipo>
+      <Equipo equipo="Data Science"></Equipo>
+      <Equipo equipo="DevOps"></Equipo>
+      <Equipo equipo="Ux y Diseño"></Equipo>
     </div>
   );
 }
