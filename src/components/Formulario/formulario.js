@@ -6,7 +6,7 @@ import Boton from "../Boton"
 import { useState } from "react"
 
 // Creacion de arrow function
-const Formulario = () =>{
+const Formulario = (props) =>{
 
     /*
         Creacion de eventos que controlaran los componentes inputs.
@@ -72,6 +72,7 @@ const Formulario = () =>{
             <ListaOpciones
                 valor = {equipo}
                 actualizar = {acutalizarEquipo}
+                equipos = {props.equipos}
             ></ListaOpciones>
             {/* Siempre que haya la posibilidad, se deben enviar texto usando PROPS */}
             <Boton texto="Crear Colaborador"></Boton>

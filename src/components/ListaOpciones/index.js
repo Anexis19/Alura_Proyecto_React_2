@@ -2,17 +2,6 @@ import './ListaOpciones.css'
 
 const ListaOpciones = (props) =>{
 
-    // Arreglo de String que menciona cada uno de los equipos
-    const equipos = [
-        "Programacion",
-        "Front End",
-        "Data Science",
-        "DevOps",
-        "UX y Diseño",
-        "Móvil",
-        "Innovación y Gestión"
-    ]
-
 
     const manejarCambio = (e) =>{
         // Actualizacion de variable del estado
@@ -41,7 +30,7 @@ const ListaOpciones = (props) =>{
                 lenguaje HTML
             */}
 
-            { equipos.map((equipo,index)=>{
+            { props.equipos.map((equipo,index)=>{
                 // En este caso se esta enviando la propiedad Key, la cual en este caso, debe ser unica y por ende, toma el valor del iterador index
                 return <option value={equipo} key={index}>{equipo}</option>
             })}

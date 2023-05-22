@@ -70,8 +70,10 @@ function App() {
       {/* Llamado a componente Header el cual se convierte a un elemento JSX */}
       <Header></Header>
 
-      {/* Aplicacion de operador Ternario que evalua el estado de mostrarFormulario */}
-      { mostrarFormulario === true ? <Formulario></Formulario> : <></>}
+      {/* Aplicacion de operador Ternario que evalua el estado de mostrarFormulario
+          De igual manera, se envia la PROP de equipos y a su vez, se hace referencia a la llave TITULO
+      */}
+      { mostrarFormulario === true ? <Formulario equipos={equipos.map((equipo) => equipo.titulo)}></Formulario> : <></>}
 
       <MiOrg cambiarMostrar = {cambiarMostrar}></MiOrg>
 
