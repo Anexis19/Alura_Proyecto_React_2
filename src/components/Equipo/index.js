@@ -1,5 +1,6 @@
 
 import "./equipo.css"
+import Colaborador from "../Colaboradores";
 
 const Equipo = (props) =>{
 
@@ -14,6 +15,11 @@ const Equipo = (props) =>{
 
         <div className="contenedorColaboladores">
 
+            {/* IMPORTACION DE COMPONENTE COLABORADORES */}
+            <Colaborador></Colaborador>
+            <Colaborador></Colaborador>
+            <Colaborador></Colaborador>
+            <Colaborador></Colaborador>
         </div>
     </section>
 }

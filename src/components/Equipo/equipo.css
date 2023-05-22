@@ -12,3 +12,9 @@
     display: inline-block;
     padding-bottom: 8px;
 }
+.contenedorColaboladores{
+    display: flex;
+    justify-content: space-evenly;
+    /* PROPIEDAD QUE EVITA EL DESBORDAMIENTO */
+    flex-wrap: wrap;
+}
