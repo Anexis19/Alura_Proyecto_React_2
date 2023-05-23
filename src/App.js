@@ -11,8 +11,13 @@ import { useState } from 'react';
 
 // Definicion de componente Padre. Componente APP es el componente principal
 function App() {
-  // Creacion de estado
+
+  // Creacion de estado para la muestra de Formularios
   const [mostrarFormulario, actualizarFormulario] = useState(false)
+
+
+  // Creacion de Estado para el registro de colaboradores
+  const [colaboradores, actualizarColaboladores] = useState([])
 
   /*
   Creacion de funcion que cambia el estado de mostrarFormulario. Esta funcion es enviada como PROP (PROPIEDAD)
@@ -60,7 +65,15 @@ function App() {
       colorPrimario: "#FF8A29",
       colorSecundario: "#FFEEDF"
     },
-   ]
+  ]
+
+  // Registrar colaborador. Funcion que es enviada desde el padre APP, hacia el hijo FORMULARIO como una PROP. De esta forma
+  // al momento en dar CREAR, se desencadena la funcion registrarColaborador en el hijo
+  const registrarColaborador = (colaborador) =>{
+    console.log("Nuevo Colaborador", colaborador);
+    // spread operator. Permite agregar agregar a un arreglo (PRIMER ARGUMENTO) una copia de un elemento (SEGUNDO ARGUMENTO)
+    actualizarColaboladores([...colaboradores, colaborador])
+  }
 
 
 
@@ -73,7 +86,14 @@ function App() {
       {/* Aplicacion de operador Ternario que evalua el estado de mostrarFormulario
           De igual manera, se envia la PROP de equipos y a su vez, se hace referencia a la llave TITULO
       */}
-      { mostrarFormulario === true ? <Formulario equipos={equipos.map((equipo) => equipo.titulo)}></Formulario> : <></>}
+      { mostrarFormulario === true ? <Formulario
+
+            equipos={equipos.map((equipo) => equipo.titulo)}
+            registrarColaborador = {registrarColaborador}
+          >
+          </Formulario> : <></>
+
+      }
 
       <MiOrg cambiarMostrar = {cambiarMostrar}></MiOrg>
 

@@ -17,6 +17,11 @@ const Formulario = (props) =>{
     const [foto, actualizarFoto] = useState("")
     const [equipo, acutalizarEquipo] = useState("")
 
+    // Destructuracion de la propiedad registrarColaborador
+    const {registrarColaborador} = props
+
+
+
     // Transformacion y lectura de datos para establecer un SPA (Single Page Application). Evitando la sobrecarga
     const manejarEnvio = (e) =>{
         // Evento que evita la recarga una vez se dispara el evento
@@ -31,7 +36,7 @@ const Formulario = (props) =>{
             equipo: equipo
 
         }
-        console.log(datosEnviar)
+        registrarColaborador(datosEnviar)
 
     }
 
