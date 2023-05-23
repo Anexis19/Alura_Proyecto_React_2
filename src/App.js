@@ -4,6 +4,7 @@ import Header from './components/Header/header';
 import Formulario from './components/Formulario/formulario';
 import MiOrg from './components/MiOrg';
 import Equipo from './components/Equipo';
+import Footer from './components/Footer';
 
 // Importacion de useState de React
 import { useState } from 'react';
@@ -111,8 +112,7 @@ function App() {
 
         } )
       }
-
-
+      <Footer></Footer>
     </div>
   );
 }
