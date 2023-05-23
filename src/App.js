@@ -81,7 +81,7 @@ function App() {
   return (
     <div>
       {/* Llamado a componente Header el cual se convierte a un elemento JSX */}
-      <Header></Header>
+        <Header></Header>
 
       {/* Aplicacion de operador Ternario que evalua el estado de mostrarFormulario
           De igual manera, se envia la PROP de equipos y a su vez, se hace referencia a la llave TITULO
@@ -100,7 +100,13 @@ function App() {
       {
         // Instruccion que permite recorrer el arreglo de equipos y ejecuta un bloque de codigo. Siempre es necesario tener una KEY unica
         equipos.map( (equipo)=>{
-          return <Equipo datos={equipo} key={equipo.titulo}></Equipo>
+
+          return <Equipo
+            datos={equipo}
+            key={equipo.titulo}
+            colaboladores={colaboradores}
+          ></Equipo>
+
         } )
       }
 

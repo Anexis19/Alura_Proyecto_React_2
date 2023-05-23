@@ -1,15 +1,18 @@
 import "./colaboradores.css"
 
-const Colaborador = () =>{
+const Colaborador = (props) =>{
+
+    // Aplicacion de destructuracion para el manejo de propiedades
+    const {nombre, puesto, foto} = props.datos
 
     return <div className="contenedorColaborador">
 
         <div className="contenedorEncabezado">
-            <img src="https://github.com/anexis19.png" alt="Error al cargar la imagen" />
+            <img src={foto} alt="Error al cargar la imagen" />
         </div>
         <div className="contenedorInfo">
-            <h4>Andres Hurtado</h4>
-            <h5>Front End Developer</h5>
+            <h4>{nombre}</h4>
+            <h5>{puesto}</h5>
         </div>
     </div>
 }
