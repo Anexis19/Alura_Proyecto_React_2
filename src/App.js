@@ -104,7 +104,9 @@ function App() {
           return <Equipo
             datos={equipo}
             key={equipo.titulo}
-            colaboladores={colaboradores}
+
+            // Se le aplica un FILTRO  a la PROP colaboradores pertenezcan a un equipo en especifico y evitar la repeticion
+            colaboladores={colaboradores.filter(colaborador => colaborador.equipo === equipo.titulo)}
           ></Equipo>
 
         } )
